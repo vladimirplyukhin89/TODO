@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { removeTodo } from "../store/todoSlice";
 
 import { MdClear } from "react-icons/md";
-import "../App.css";
+import "./scss/styles.scss";
 
 const DeleteButton = ({ id }) => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const DeleteButton = ({ id }) => {
         dispatch(removeTodo({ id }));
       }}
     >
-      <MdClear className="app__list_todo-close" />
+      <MdClear className="list__todo-close" />
     </button>
   );
 };

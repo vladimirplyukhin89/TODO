@@ -7,7 +7,7 @@ import {
   useSpringRef,
 } from "react-spring";
 
-import "../App.css";
+import "./scss/styles.scss";
 
 const CheckboxAnimation = ({ completed }) => {
   const [checkLength, setCheckLength] = React.useState(null);
@@ -15,7 +15,7 @@ const CheckboxAnimation = ({ completed }) => {
 
   const checkboxAnimation = useSpring({
     backgroundColor: completed ? "rgb(100, 255, 218)" : "#fff",
-    borderColor: completed === true ? "rgb(100, 255, 218)" : "#fff",
+    borderColor: completed ? "rgb(100, 255, 218)" : "#fff",
     config: config.gentle,
     ref: checkboxAnimationRef,
   });
@@ -37,7 +37,7 @@ const CheckboxAnimation = ({ completed }) => {
   return (
     <animated.svg
       style={checkboxAnimation}
-      className={`checkbox ${completed ? "app__list_todo-active" : ""} `}
+      className="checkbox"
       aria-hidden="true"
       viewBox="0 0 15 11"
       fill="none"

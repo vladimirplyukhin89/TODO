@@ -9,9 +9,11 @@ const RenderTodoList = ({ todos }) => {
   return (
     <>
       {todos.map((todo) => (
-        <li key={todo.id} className="app__list_todo">
+        <li key={todo.id} className="list__todo">
           <label
-            className={`app__list_todo-text ${isChecked ? "isChecked" : ""}`}
+            className={`list__todo-text ${
+              todo.completed === true ? "isChecked" : ""
+            }`}
           >
             <TodoOutText {...todo} />
 

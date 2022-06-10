@@ -1,11 +1,12 @@
 import React from "react";
-import TodoTask from "./components/TodoTask";
-import TodoList from "./components/TodoList";
+import TodoTask from "../TodoTask";
+import TodoList from "../TodoList";
 import { useDispatch } from "react-redux";
-import { addTodo } from "./store/todoSlice";
+import { addTodo } from "../../store/todoSlice";
 
-import "./App.css";
-import "./reset.css";
+import "../scss/styles.scss";
+import "./_app.scss";
+import "./_reset.scss";
 
 function App() {
   const [text, setText] = React.useState("");

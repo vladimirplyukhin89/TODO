@@ -1,0 +1,30 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+input[type="checkbox"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+
+  height: 1px;
+  width: 1px;
+
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+
+  background-color: rgb(136, 146, 176);
+  font-family: inherit;
+}

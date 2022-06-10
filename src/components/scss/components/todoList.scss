@@ -1,0 +1,77 @@
+.list {
+  list-style: none;
+
+  padding: 1rem;
+
+  &__todo {
+    width: auto;
+    margin-bottom: 1em;
+    padding: 0.5em;
+
+    text-align: start;
+    position: relative;
+
+    border-radius: 10px;
+
+    background-color: rgb(155, 9, 155);
+    box-shadow: 0 4px 8px rgb(67, 21, 7);
+    opacity: 0.6;
+  }
+
+  &__todo:last-child {
+    margin-bottom: 0;
+  }
+
+  &__todo:hover .list__todo-text {
+    color: #fff;
+  }
+
+  &__todo-checkbox {
+    margin-right: 0.5em;
+  }
+
+  &__todo-text {
+    display: flex;
+    align-items: center;
+
+    color: rgb(204, 214, 246);
+    margin-right: 2em;
+
+    cursor: pointer;
+    height: auto;
+  }
+
+  &__todo-close {
+    position: absolute;
+    top: 35%;
+    right: 10px;
+
+    cursor: pointer;
+  }
+
+  &__todo-close:hover {
+    fill: rgb(10, 25, 47);
+  }
+}
+
+.isChecked {
+  color: rgb(204, 214, 246);
+
+  & span {
+    text-decoration: line-through;
+
+    color: rgb(10, 25, 47);
+    transition: all 0.3s;
+  }
+}
+
+.checkbox {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+
+  margin-right: 0.5em;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+}

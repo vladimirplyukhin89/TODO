@@ -2,13 +2,13 @@ import React from "react";
 import { useSelector } from "react-redux";
 import RenderTodoList from "./RenderTodoList";
 
-import "../App.css";
+import "./scss/styles.scss";
 
 const TodoList = () => {
   const todos = useSelector((state) => state.todos.todos);
 
   return (
-    <ul className="app__list">
+    <ul className="list">
       <RenderTodoList todos={todos} />
     </ul>
   );

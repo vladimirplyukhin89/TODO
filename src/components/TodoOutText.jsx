@@ -2,7 +2,7 @@ import React from "react";
 import { toggleTodoComplete } from "../store/todoSlice";
 import { useDispatch } from "react-redux";
 
-import "../App.css";
+import "./scss/styles.scss";
 
 const TodoOutText = ({ id, completed }) => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const TodoOutText = ({ id, completed }) => {
     <input
       type="checkbox"
       checked={completed}
-      className="app__list_todo-checkbox"
+      className="list__todo-checkbox"
       onChange={() => {
         dispatch(toggleTodoComplete({ id }));
       }}
