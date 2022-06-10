@@ -13,8 +13,8 @@ const TodoTask = ({ text, setText, handleSubmit }) => {
       />
       <label className="input__content">Your todo</label>
 
-      <button onClick={handleSubmit} className="input__btn">
-        <span>Add todo</span>
+      <button onClick={handleSubmit} className="input__btn" type="button">
+        <span className="input__btn_after">Add todo</span>
       </button>
     </div>
   );
