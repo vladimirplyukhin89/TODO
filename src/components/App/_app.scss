@@ -1,6 +1,8 @@
+@import "./vars";
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(136, 146, 176);
+  background-color: $clr_bg;
 }
 
 .app {

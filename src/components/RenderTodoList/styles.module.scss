@@ -1,3 +1,5 @@
+@import "../App/vars";
+
 .list__todo {
   width: auto;
   margin-bottom: 1em;
@@ -8,8 +10,8 @@
 
   border-radius: 10px;
 
-  background-color: #8d1e8d;
-  box-shadow: 0 4px 8px rgb(67, 21, 7);
+  background-color: $clr_todo;
+  box-shadow: 0 4px 8px $clr_brown;
 
   &:last-child {
     margin-bottom: 0;
@@ -28,7 +30,7 @@
   display: flex;
   align-items: center;
 
-  color: rgb(204, 214, 246);
+  color: $clr_text1;
   margin-right: 2em;
 
   cursor: pointer;
@@ -36,12 +38,12 @@
 }
 
 .isChecked {
-  color: rgb(204, 214, 246);
+  color: $clr_text1;
 
   & span {
     text-decoration: line-through;
 
-    color: rgb(10, 25, 47);
+    color: $clr_black;
     transition: all 0.3s;
   }
 }

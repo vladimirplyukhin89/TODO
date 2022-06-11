@@ -1,3 +1,5 @@
+@import "../App/vars";
+
 .checkbox {
   display: inline-block;
   width: 1em;
@@ -5,7 +7,7 @@
   min-width: 1em;
 
   margin-right: 0.5em;
-  background-color: #fff;
-  border: 2px solid #fff;
+  background-color: $clr_white;
+  border: 2px solid $clr_white;
   border-radius: 4px;
 }
