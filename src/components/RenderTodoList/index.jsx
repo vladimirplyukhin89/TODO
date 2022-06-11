@@ -1,16 +1,19 @@
-import CheckboxAnimation from "./CheckboxAnimation";
-import DeleteButton from "./DeleteButton";
-import TodoOutText from "./TodoOutText";
+import CheckboxAnimation from "../CheckboxAnimation";
+import DeleteButton from "../DeleteButton";
+import TodoOutText from "../TodoOutText";
+
+import cn from "classnames";
+import s from "./styles.module.scss";
 
 const RenderTodoList = ({ todos }) => {
   return (
     <>
       {todos.map((todo) => (
-        <li key={todo.id} className="list__todo">
+        <li key={todo.id} className={s.list__todo}>
           <label
-            className={`list__todo-text ${
-              todo.completed === true ? "isChecked" : ""
-            }`}
+            className={cn(s.todo__text, {
+              [s.isChecked]: todo.completed,
+            })}
           >
             <TodoOutText {...todo} />
 

@@ -1,9 +1,10 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { removeTodo } from "../store/todoSlice";
+import { removeTodo } from "../../store/todoSlice";
 
 import { MdClear } from "react-icons/md";
-import "./scss/styles.scss";
+
+import s from "./styles.module.scss";
 
 const DeleteButton = ({ id }) => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const DeleteButton = ({ id }) => {
         dispatch(removeTodo({ id }));
       }}
     >
-      <MdClear className="list__todo-close" />
+      <MdClear className={s.todo__close} />
     </button>
   );
 };

@@ -1,0 +1,17 @@
+.list {
+  list-style: none;
+  padding: 1rem;
+
+  &__title {
+    color: #fff;
+    opacity: 0.8;
+
+    padding-bottom: 1em;
+  }
+}
+
+.active {
+  box-shadow: 0 4px 16px #ccc;
+  outline: 1px solid #ccc;
+  border-radius: 10px;
+}

@@ -4,7 +4,6 @@ import TodoList from "../TodoList";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../../store/todoSlice";
 
-import "../scss/styles.scss";
 import "./_app.scss";
 import "./_reset.scss";
 

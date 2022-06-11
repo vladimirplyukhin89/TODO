@@ -1,23 +1,23 @@
 import React from "react";
 
-import "./scss/styles.scss";
 import { MdClear } from "react-icons/md";
+import s from "./styles.module.scss";
 
 const TodoTask = ({ text, setText, handleSubmit }) => {
   return (
-    <div className="input">
+    <div className={s.input}>
       <input
         value={text}
         onChange={(e) => setText(e.target.value)}
-        className="input__text"
+        className={s.input__text}
         placeholder=" "
       />
 
-      <label className="input__content">Your todo</label>
+      <label className={s.input__content}>Your todo</label>
 
       {text && (
         <button
-          className="input__clear"
+          className={s.input__clear}
           onClick={() => {
             setText("");
           }}
@@ -28,11 +28,11 @@ const TodoTask = ({ text, setText, handleSubmit }) => {
 
       <button
         onClick={handleSubmit}
-        className="input__btn"
+        className={s.input__btn}
         type="button"
         disabled={!text.length}
       >
-        <span className="input__btn_after">Add todo</span>
+        <span className={s.input__btn_after}>Add todo</span>
       </button>
     </div>
   );

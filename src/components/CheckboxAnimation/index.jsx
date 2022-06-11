@@ -7,7 +7,7 @@ import {
   useSpringRef,
 } from "react-spring";
 
-import "./scss/styles.scss";
+import s from "./styles.module.scss";
 
 const CheckboxAnimation = ({ completed }) => {
   const [checkLength, setCheckLength] = React.useState(null);
@@ -37,7 +37,7 @@ const CheckboxAnimation = ({ completed }) => {
   return (
     <animated.svg
       style={checkboxAnimation}
-      className="checkbox"
+      className={s.checkbox}
       aria-hidden="true"
       viewBox="0 0 15 11"
       fill="none"

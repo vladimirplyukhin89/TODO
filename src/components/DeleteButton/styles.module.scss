@@ -1,0 +1,11 @@
+.todo__close {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+
+  cursor: pointer;
+
+  &:hover {
+    fill: rgb(10, 25, 47);
+  }
+}
