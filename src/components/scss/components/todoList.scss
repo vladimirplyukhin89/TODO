@@ -53,25 +53,3 @@
     fill: rgb(10, 25, 47);
   }
 }
-
-.isChecked {
-  color: rgb(204, 214, 246);
-
-  & span {
-    text-decoration: line-through;
-
-    color: rgb(10, 25, 47);
-    transition: all 0.3s;
-  }
-}
-
-.checkbox {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-
-  margin-right: 0.5em;
-  background-color: #fff;
-  border: 2px solid #fff;
-  border-radius: 4px;
-}

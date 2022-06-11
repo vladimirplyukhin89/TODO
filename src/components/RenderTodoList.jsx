@@ -1,11 +1,8 @@
-import React from "react";
 import CheckboxAnimation from "./CheckboxAnimation";
 import DeleteButton from "./DeleteButton";
 import TodoOutText from "./TodoOutText";
 
 const RenderTodoList = ({ todos }) => {
-  const [isChecked, setIsChecked] = React.useState(true);
-
   return (
     <>
       {todos.map((todo) => (

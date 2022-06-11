@@ -11,7 +11,7 @@
   justify-content: space-between;
   width: 80%;
 
-  .input__text {
+  &__text {
     width: 100%;
 
     outline: none;
@@ -24,69 +24,15 @@
 
     letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
-  }
 
-  .input__text:focus {
-    border-bottom: 1px solid rgba(100, 255, 218, 0.5);
-    opacity: 0.8;
-    color: #fff;
-  }
-
-  .input__btn {
-    width: 20%;
-    min-width: 6em;
-    padding: 0.5rem;
-    margin-left: 1rem;
-
-    font-size: 0.9em;
-
-    color: rgb(204, 214, 246);
-    background-color: rgb(10, 25, 47);
-
-    border-radius: 15px;
-
-    position: relative;
-    overflow: hidden;
-
-    &:active {
-      box-shadow: 0 4px 12px rgb(10, 25, 47);
+    &:focus {
+      border-bottom: 1px solid rgba(100, 255, 218, 0.5);
+      opacity: 0.8;
+      color: #fff;
     }
   }
 
-  .input__btn_after {
-    position: relative;
-    display: block;
-
-    z-index: 10;
-    transition: transform 0.3s ease-in;
-  }
-
-  .input__btn_after::before {
-    content: "Do it";
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    color: rgb(100, 255, 218);
-    transform: translateY(125%);
-  }
-
-  .input__btn:hover .input__btn_after {
-    color: rgb(100, 255, 218);
-    opacity: 0.6;
-
-    transform: translateY(-125%);
-
-    &:active {
-      opacity: 1;
-    }
-  }
-
-  .input__content {
+  &__content {
     position: absolute;
     left: 3%;
     top: 40%;
@@ -94,6 +40,21 @@
     font-size: 14px;
     color: rgb(204, 214, 246);
     transition: all 0.3s ease-in-out;
+  }
+
+  &__clear {
+    color: rgb(204, 214, 246);
+    border-radius: 50%;
+
+    width: 1.9em;
+    height: 1.4em;
+
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      color: rgb(10, 25, 47);
+    }
   }
 }
 
