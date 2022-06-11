@@ -12,7 +12,7 @@ const TodoList = () => {
 
   return (
     <ul className={cn(s.list, { [s.active]: todoLen })}>
-      {todoLen && <h1 className={s.list__title}>TODOs</h1>}
+      {todoLen && <h1 className={s.list__title}>TODO</h1>}
       <RenderTodoList todos={todos} />
     </ul>
   );

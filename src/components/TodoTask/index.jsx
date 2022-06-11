@@ -1,9 +1,13 @@
 import React from "react";
 
 import { MdClear } from "react-icons/md";
+import cn from "classnames";
 import s from "./styles.module.scss";
 
 const TodoTask = ({ text, setText, handleSubmit }) => {
+  console.log(text.length);
+  const textLen = text.length > 0 ? true : false;
+
   return (
     <div className={s.input}>
       <input
@@ -28,11 +32,13 @@ const TodoTask = ({ text, setText, handleSubmit }) => {
 
       <button
         onClick={handleSubmit}
-        className={s.input__btn}
+        className={cn(s.input__btn, { [s.active]: textLen })}
         type="button"
         disabled={!text.length}
       >
-        <span className={s.input__btn_after}>Add todo</span>
+        <span className={cn(s.input__btn_after, { [s.active]: textLen })}>
+          Add todo
+        </span>
       </button>
     </div>
   );

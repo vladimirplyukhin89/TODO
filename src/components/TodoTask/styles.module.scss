@@ -85,7 +85,7 @@
   position: relative;
   overflow: hidden;
 
-  &:active {
+  &.active {
     box-shadow: 0 4px 12px rgb(10, 25, 47);
   }
 
@@ -117,8 +117,9 @@
   opacity: 0.6;
 
   transform: translateY(-125%);
+}
 
-  &:active {
-    opacity: 1;
-  }
+// Если поле инпут не пустое
+.input__btn:active .active {
+  opacity: 1;
 }

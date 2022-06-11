@@ -9,7 +9,10 @@ const RenderTodoList = ({ todos }) => {
   return (
     <>
       {todos.map((todo) => (
-        <li key={todo.id} className={s.list__todo}>
+        <li
+          key={todo.id}
+          className={cn(s.list__todo, { [s.completed]: todo.completed })}
+        >
           <label
             className={cn(s.todo__text, {
               [s.isChecked]: todo.completed,

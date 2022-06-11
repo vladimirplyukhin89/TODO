@@ -7,11 +7,25 @@
     opacity: 0.8;
 
     padding-bottom: 1em;
+    letter-spacing: 2px;
   }
 }
 
 .active {
+  margin: 0 2em;
+
   box-shadow: 0 4px 16px #ccc;
   outline: 1px solid #ccc;
   border-radius: 10px;
+
+  animation: todo 1.5s forwards;
+}
+
+@keyframes todo {
+  from {
+    transform: translateY(-15px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
