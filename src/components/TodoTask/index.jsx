@@ -5,8 +5,7 @@ import cn from "classnames";
 import s from "./styles.module.scss";
 
 const TodoTask = ({ text, setText, handleSubmit }) => {
-  console.log(text.length);
-  const textLen = text.length > 0 ? true : false;
+  const textLength = text.length > 0 ? true : false;
 
   return (
     <div className={s.input}>
@@ -32,11 +31,11 @@ const TodoTask = ({ text, setText, handleSubmit }) => {
 
       <button
         onClick={handleSubmit}
-        className={cn(s.input__btn, { [s.active]: textLen })}
+        className={cn(s.input__btn, { [s.active]: textLength })}
         type="button"
         disabled={!text.length}
       >
-        <span className={cn(s.input__btn_after, { [s.active]: textLen })}>
+        <span className={cn(s.input__btn_after, { [s.active]: textLength })}>
           Add todo
         </span>
       </button>

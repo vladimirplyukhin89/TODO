@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { removeTodo } from "../../store/todoSlice";
 
 import { MdClear } from "react-icons/md";
-
 import s from "./styles.module.scss";
 
 const DeleteButton = ({ id }) => {

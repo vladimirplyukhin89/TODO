@@ -1,4 +1,4 @@
-# This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). I also used in this project:
+## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). I also used in this project:
 
 1. "classnames": "^2.3.1",
 2. "node-sass": "^7.0.1",

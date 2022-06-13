@@ -1,0 +1,34 @@
+@import "../App/vars";
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  color: $clr_white;
+  font-size: 0.9em;
+  opacity: 0.8;
+
+  & span {
+    outline: 1px solid red;
+    padding: 5px;
+  }
+
+  &__all,
+  &__active,
+  &__completed {
+    cursor: pointer;
+  }
+
+  &:first-child {
+    color: $clr_text2;
+  }
+}
+
+.clear__completed {
+  cursor: pointer;
+
+  &:hover {
+    color: $clr_black;
+  }
+}

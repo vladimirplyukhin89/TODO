@@ -3,6 +3,7 @@
 .list {
   list-style: none;
   padding: 1rem;
+  min-width: 320px;
 
   &__title {
     color: $clr_white;
