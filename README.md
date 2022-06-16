@@ -25,7 +25,7 @@ See the live site on [Vercel](https://todo-chi-steel.vercel.app/)
 
 <li>Flexbox</li>
 <li>SCSS modules</li>
-<li>Adaptive design and mobile-first workflow</li>
+<li>RWD(Responsive web design)</li>
 <li>React-JS library</li>
 <li>Redux Toolkit</li>
 <li>React Spring</li>
