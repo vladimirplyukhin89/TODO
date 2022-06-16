@@ -7,7 +7,7 @@ import {
   useSpringRef,
 } from "react-spring";
 
-import s from "./styles.module.scss";
+import s from "../../styles/modules/checkboxAnimation.module.scss";
 
 const CheckboxAnimation = ({ completed }) => {
   const [checkLength, setCheckLength] = React.useState(null);

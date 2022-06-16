@@ -1,11 +1,11 @@
 import React from "react";
-import TodoTask from "../TodoTask";
-import TodoList from "../TodoList";
+import TodoHeader from "../TodoHeader";
+import TodoMain from "../TodoMain";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../../store/todoSlice";
 
-import "./_app.scss";
-import "./_reset.scss";
+import "../../styles/base/_app.scss";
+import "../../styles/base/_reset.scss";
 
 function App() {
   const [text, setText] = React.useState("");
@@ -18,9 +18,9 @@ function App() {
 
   return (
     <div className="app">
-      <TodoTask text={text} setText={setText} handleSubmit={addTask} />
+      <TodoHeader text={text} setText={setText} handleSubmit={addTask} />
 
-      <TodoList />
+      <TodoMain />
     </div>
   );
 }

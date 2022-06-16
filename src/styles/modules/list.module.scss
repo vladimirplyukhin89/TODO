@@ -1,16 +1,24 @@
-@import "../App/vars";
+@import "../base/vars";
 
 .list {
   list-style: none;
   padding: 1rem;
   min-width: 320px;
 
-  &__title {
+  &__title1 {
     color: $clr_white;
     opacity: 0.8;
 
     padding-bottom: 1em;
     letter-spacing: 2px;
+  }
+
+  &__title2 {
+    color: $clr_text2;
+    opacity: 0.8;
+
+    letter-spacing: 1px;
+    font-size: 1.2em;
   }
 }
 

@@ -2,9 +2,9 @@ import React from "react";
 
 import { MdClear } from "react-icons/md";
 import cn from "classnames";
-import s from "./styles.module.scss";
+import s from "../../styles/modules/header.module.scss";
 
-const TodoTask = ({ text, setText, handleSubmit }) => {
+const TodoHeader = ({ text, setText, handleSubmit }) => {
   const textLength = text.length > 0 ? true : false;
 
   return (
@@ -43,4 +43,4 @@ const TodoTask = ({ text, setText, handleSubmit }) => {
   );
 };
 
-export default TodoTask;
+export default TodoHeader;

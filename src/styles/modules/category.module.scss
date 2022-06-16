@@ -1,0 +1,68 @@
+@import "../base/vars";
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 1em;
+
+  color: $clr_white;
+  font-size: 0.9em;
+  opacity: 0.8;
+
+  & li {
+    padding: 5px;
+
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: $clr_text2;
+      opacity: 0.5;
+
+      background-color: $clr_black;
+    }
+
+    &:active {
+      background-color: inherit;
+      opacity: 1;
+    }
+
+    &.active {
+      color: $clr_text2;
+      background-color: inherit;
+      opacity: 1;
+    }
+    &:first-child {
+      cursor: auto;
+
+      color: $clr_white;
+
+      &:hover {
+        color: $clr_white;
+        background-color: $clr_bg;
+        opacity: 1;
+      }
+    }
+  }
+  .clear {
+    display: flex;
+
+    cursor: pointer;
+
+    &:hover {
+      color: $clr_black;
+      opacity: 0.5;
+    }
+
+    &:active {
+      color: $clr_black;
+      opacity: 1;
+    }
+  }
+
+  .delete {
+    display: none;
+  }
+}

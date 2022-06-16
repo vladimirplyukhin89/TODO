@@ -1,10 +1,10 @@
 export function declOfNum(n, text_forms) {
   n = Math.abs(n) % 100;
   var n1 = n % 10;
-  if (n > 10 && n < 20) {
+  if (n > 1) {
     return text_forms[2];
   }
-  if (n1 > 1 && n1 < 5) {
+  if (n1 > 0 && n1 < 2) {
     return text_forms[1];
   }
   if (n1 === 0) {
@@ -13,4 +13,4 @@ export function declOfNum(n, text_forms) {
   return text_forms[2];
 }
 
-export const words = ["all done", "items left", "item left"];
+export const words = ["all done", "item left", "items left"];

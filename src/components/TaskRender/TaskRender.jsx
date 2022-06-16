@@ -1,13 +1,18 @@
+import React from "react";
 import CheckboxAnimation from "../CheckboxAnimation";
-import DeleteButton from "../DeleteButton";
-import TodoOutText from "../TodoOutText";
+import DeleteTask from "../DeleteTask";
+import TaskComplete from "../TaskComplete";
+import { useDispatch } from "react-redux";
 
 import cn from "classnames";
-import s from "./styles.module.scss";
+import s from "../../styles/modules/taskRender.module.scss";
 
-const RenderTodoList = ({ todos }) => {
+const TaskRender = ({ todos }) => {
+  const dispatch = useDispatch();
+  const [checked, setChecked] = React.useState(false);
+
   return (
-    <>
+    <ul>
       {todos.map((todo) => (
         <li
           key={todo.id}
@@ -18,18 +23,18 @@ const RenderTodoList = ({ todos }) => {
               [s.isChecked]: todo.completed,
             })}
           >
-            <TodoOutText {...todo} />
+            <TaskComplete {...todo} />
 
             <CheckboxAnimation {...todo} />
 
             <span>{todo.text}</span>
 
-            <DeleteButton {...todo} />
+            <DeleteTask {...todo} />
           </label>
         </li>
       ))}
-    </>
+    </ul>
   );
 };
 
-export default RenderTodoList;
+export default TaskRender;

@@ -2,9 +2,9 @@ import React from "react";
 import { toggleTodoComplete } from "../../store/todoSlice";
 import { useDispatch } from "react-redux";
 
-import s from "./styles.module.scss";
+import s from "../../styles/modules/complete.module.scss";
 
-const TodoOutText = ({ id, completed }) => {
+const TaskComplete = ({ id, completed }) => {
   const dispatch = useDispatch();
 
   return (
@@ -19,4 +19,4 @@ const TodoOutText = ({ id, completed }) => {
   );
 };
 
-export default TodoOutText;
+export default TaskComplete;
