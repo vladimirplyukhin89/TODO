@@ -33,8 +33,8 @@ const TodoMain = () => {
     { name: "completed", id: 3 },
   ];
 
-  const onClickCategory = (i) => {
-    setActiveIdx(i);
+  const onClickCategory = (id) => {
+    setActiveIdx(id);
   };
 
   return (

@@ -7,11 +7,11 @@ const TaskCategory = ({ index, categories, onClickCategory }) => {
   return (
     <>
       <ul className={s.footer}>
-        {categories.map((category, i) => (
+        {categories.map((category) => (
           <li
-            key={i}
+            key={category.id}
             onClick={() => onClickCategory(category.name)}
-            className={cn({ [s.active]: index === i })}
+            className={cn({ [s.active]: index === category.id })}
           >
             {category.name}
           </li>

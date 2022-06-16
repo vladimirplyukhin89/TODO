@@ -8,9 +8,6 @@ import cn from "classnames";
 import s from "../../styles/modules/taskRender.module.scss";
 
 const TaskRender = ({ todos }) => {
-  const dispatch = useDispatch();
-  const [checked, setChecked] = React.useState(false);
-
   return (
     <ul>
       {todos.map((todo) => (

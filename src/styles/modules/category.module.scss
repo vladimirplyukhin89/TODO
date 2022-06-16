@@ -46,23 +46,4 @@
       }
     }
   }
-  .clear {
-    display: flex;
-
-    cursor: pointer;
-
-    &:hover {
-      color: $clr_black;
-      opacity: 0.5;
-    }
-
-    &:active {
-      color: $clr_black;
-      opacity: 1;
-    }
-  }
-
-  .delete {
-    display: none;
-  }
 }
