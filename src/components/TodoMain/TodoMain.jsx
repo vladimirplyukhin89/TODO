@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { changeFilter } from "../../store/filterSlice";
-import { selectTodosByFilter } from "../../store/selectors";
+import { selectTodosByFilter, selectAllTodos } from "../../store/selectors";
 import TaskRender from "../TaskRender/TaskRender";
 import TaskCategory from "../TaskCategory/TaskCategory";
 import { declOfNum, words } from "../../utils";
@@ -16,7 +16,7 @@ const TodoMain = () => {
   const dispatch = useDispatch();
 
   // Кол-во завершённых задач
-  let itemsCompleted = todos.filter((todo) => todo.completed === true);
+  let itemsCompleted = todos.filter((todo) => todo.completed);
   const allTodos = todos.length - itemsCompleted.length;
 
   // Для склонения слова item
