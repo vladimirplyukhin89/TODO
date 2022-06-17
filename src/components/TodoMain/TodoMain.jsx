@@ -1,8 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { changeFilter } from "../../store/filterSlice";
+import { selectTodosByFilter } from "../../store/selectors";
 import TaskRender from "../TaskRender/TaskRender";
 import TaskCategory from "../TaskCategory/TaskCategory";
-import { changeFilter } from "../../store/filterSlice";
 import { declOfNum, words } from "../../utils";
 
 import cn from "classnames";
@@ -10,7 +11,7 @@ import s from "../../styles/modules/list.module.scss";
 
 const TodoMain = () => {
   const [activeIdx, setActiveIdx] = React.useState(0);
-  const todos = useSelector((state) => state.todos.todos);
+  const todos = useSelector(selectTodosByFilter);
   const todoLength = todos.length > 0;
   const dispatch = useDispatch();
 
