@@ -8,7 +8,6 @@ import toast from "react-hot-toast";
 
 import "../../styles/base/_app.scss";
 import "../../styles/base/_reset.scss";
-import "../../styles/base/_toast.scss";
 
 function App() {
   const [text, setText] = React.useState("");
@@ -21,10 +20,9 @@ function App() {
       toast("Let's do it", {
         duration: 5000,
         position: "right-bottom",
-        //className: "success",
         style: {
           color: "rgb(204, 204, 204)",
-          "background-color": "rgba(9, 180, 140, 0.6)",
+          backgroundColor: "rgba(9, 180, 140, 0.6)",
           border: "1px solid rgb(204, 204, 204)",
           padding: "0.4rem",
         },
