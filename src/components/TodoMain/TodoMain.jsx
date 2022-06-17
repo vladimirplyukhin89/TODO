@@ -47,6 +47,7 @@ const TodoMain = () => {
         categories={categories}
         onClickCategory={onClickCategory}
         itemsLeft={itemsLeft}
+        todoLength={todoLength}
       />
       {todoLength && <TaskRender todos={todos} />}
     </div>

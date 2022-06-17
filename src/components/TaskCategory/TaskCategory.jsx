@@ -1,11 +1,18 @@
 import cn from "classnames";
 import s from "../../styles/modules/category.module.scss";
 
-const TaskCategory = ({ index, categories, onClickCategory, itemsLeft }) => {
+const TaskCategory = ({
+  index,
+  categories,
+  onClickCategory,
+  itemsLeft,
+  todoLength,
+}) => {
+  console.log(todoLength);
   return (
     <>
       <ul className={s.footer}>
-        <span>{itemsLeft}</span>
+        <span className={cn({ [s.done]: !todoLength })}>{itemsLeft}</span>
         {categories.map((category) => (
           <li
             key={category.id}

@@ -11,6 +11,10 @@
   font-size: 0.9em;
   opacity: 0.8;
 
+  .done {
+    color: $clr_text2;
+  }
+
   & li {
     padding: 5px;
 
