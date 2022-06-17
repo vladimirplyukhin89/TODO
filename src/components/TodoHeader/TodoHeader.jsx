@@ -10,7 +10,7 @@ const TodoHeader = ({ text, setText, handleSubmit }) => {
   return (
     <div className={s.input}>
       <input
-        value={text}
+        value={text.trimStart()}
         onChange={(e) => setText(e.target.value)}
         className={s.input__text}
         placeholder=" "
