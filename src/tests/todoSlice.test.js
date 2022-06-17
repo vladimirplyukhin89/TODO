@@ -1,22 +1,9 @@
-import todoReducer, {
-  addTodo,
-  removeTodo,
-  toggleTodoComplete,
-} from "../store/todoSlice";
+import todoReducer from "../store/todoSlice";
 
 describe("todoSlice", () => {
-  //  it("should return default state when passed an empty action", () => {
-  //    const result = todoReducer(undefined, { type: "" });
+  it("should return default state when passed an empty action", () => {
+    const result = todoReducer({ todos: [] }, { type: "" });
 
-  //    expect(result).toEqual([]);
-  //  });
-
-  it('should add new todo item with "addTodo" action', () => {
-    const action = { type: addTodo.type, payload: "Test" };
-
-    const result = todoReducer({}, action);
-
-    //expect(result[0].text).toBe("Test");
-    expect(result[0].todos.completed).toBe(false);
+    expect(result).toEqual({ todos: [] });
   });
 });

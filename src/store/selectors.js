@@ -2,6 +2,7 @@ import { createSelector } from "@reduxjs/toolkit";
 
 export const selectAllTodos = (state) => state.todos.todos;
 export const selectActiveFilter = (state) => state.filters;
+export const selectTodos = (state) => state.todos;
 
 export const selectTodosByFilter = createSelector(
   [selectAllTodos, selectActiveFilter],

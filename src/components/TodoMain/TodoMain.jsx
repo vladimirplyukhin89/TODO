@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { changeFilter } from "../../store/filterSlice";
-import { selectTodosByFilter, selectAllTodos } from "../../store/selectors";
+import { selectTodosByFilter } from "../../store/selectors";
 import TaskRender from "../TaskRender/TaskRender";
 import TaskCategory from "../TaskCategory/TaskCategory";
 import { declOfNum, words } from "../../utils";
