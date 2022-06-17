@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import TaskRender from "../TaskRender/TaskRender";
 import TaskCategory from "../TaskCategory/TaskCategory";
+import { changeFilter } from "../../store/filterSlice";
 import { declOfNum, words } from "../../utils";
 
 import cn from "classnames";
@@ -26,15 +27,17 @@ const TodoMain = () => {
 
   // Для выбора категории
   const itemsLeft = `${checkAllTodos(allTodos, words)} ${itemsDecl}`;
+  let id = 0;
   const categories = [
-    { name: itemsLeft, id: 0 },
-    { name: "all", id: 1 },
-    { name: "active", id: 2 },
-    { name: "completed", id: 3 },
+    { name: itemsLeft, id: ++id },
+    { name: "all", id: ++id },
+    { name: "active", id: ++id },
+    { name: "completed", id: ++id },
   ];
 
-  const onClickCategory = (id) => {
+  const onClickCategory = (id, name) => {
     setActiveIdx(id);
+    dispatch(changeFilter(name));
   };
 
   return (

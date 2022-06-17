@@ -12,7 +12,7 @@ function App() {
   const dispatch = useDispatch();
 
   const addTask = () => {
-    if (text.trimStart()) {
+    if (text.trimStart().length) {
       dispatch(addTodo({ text }));
       setText("");
     }
