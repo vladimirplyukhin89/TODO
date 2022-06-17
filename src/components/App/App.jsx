@@ -21,7 +21,13 @@ function App() {
       toast("Let's do it", {
         duration: 5000,
         position: "right-bottom",
-        className: "success",
+        //className: "success",
+        style: {
+          color: "$clr_grey",
+          "background-color": "$clr_success",
+          border: "1px solid $clr_grey",
+          padding: "0.4rem",
+        },
       });
     }
   };

@@ -8,7 +8,6 @@ const TaskCategory = ({
   itemsLeft,
   todoLength,
 }) => {
-  console.log(todoLength);
   return (
     <>
       <ul className={s.footer}>
