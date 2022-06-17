@@ -5,7 +5,7 @@
   justify-content: space-around;
   align-items: center;
 
-  margin-top: 1em;
+  margin-bottom: 1em;
 
   color: $clr_white;
   font-size: 0.9em;
@@ -33,17 +33,6 @@
       color: $clr_text2;
       background-color: inherit;
       opacity: 1;
-    }
-    &:first-child {
-      cursor: auto;
-
-      color: $clr_white;
-
-      &:hover {
-        color: $clr_white;
-        background-color: $clr_bg;
-        opacity: 1;
-      }
     }
   }
 }

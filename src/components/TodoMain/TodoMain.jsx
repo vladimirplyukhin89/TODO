@@ -30,7 +30,6 @@ const TodoMain = () => {
   const itemsLeft = `${checkAllTodos(allTodos, words)} ${itemsDecl}`;
   let id = 0;
   const categories = [
-    { name: itemsLeft, id: ++id },
     { name: "all", id: ++id },
     { name: "active", id: ++id },
     { name: "completed", id: ++id },
@@ -44,20 +43,26 @@ const TodoMain = () => {
   return (
     <div className={cn(s.list, { [s.active]: todoLength })}>
       {todoLength ? (
-        <h1 className={s.list__title1}>TODO</h1>
+        <TaskCategory
+          index={activeIdx}
+          categories={categories}
+          onClickCategory={onClickCategory}
+          itemsLeft={itemsLeft}
+        />
       ) : (
         <h1 className={s.list__title2}>No TODO yet</h1>
       )}
 
       <TaskRender todos={todos} />
 
-      {todoLength && (
+      {/*{todoLength && (
         <TaskCategory
           index={activeIdx}
           categories={categories}
           onClickCategory={onClickCategory}
+          itemsLeft={itemsLeft}
         />
-      )}
+      )}*/}
     </div>
   );
 };

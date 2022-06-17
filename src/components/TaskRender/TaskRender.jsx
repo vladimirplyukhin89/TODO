@@ -2,7 +2,6 @@ import React from "react";
 import CheckboxAnimation from "../CheckboxAnimation";
 import DeleteTask from "../DeleteTask";
 import TaskComplete from "../TaskComplete";
-import { useDispatch } from "react-redux";
 
 import cn from "classnames";
 import s from "../../styles/modules/taskRender.module.scss";

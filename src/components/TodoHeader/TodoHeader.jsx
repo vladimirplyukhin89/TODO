@@ -1,5 +1,3 @@
-import React from "react";
-
 import { MdClear } from "react-icons/md";
 import cn from "classnames";
 import s from "../../styles/modules/header.module.scss";

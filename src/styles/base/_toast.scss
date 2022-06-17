@@ -1,0 +1,18 @@
+@import "./vars";
+
+.success {
+  color: $clr_grey;
+  background-color: $clr_success;
+  border: 1px solid $clr_grey;
+
+  padding: 0.4rem;
+}
+
+.delete {
+  color: $clr_grey;
+  background-color: $clr_delete;
+  border: 1px solid $clr_grey;
+  opacity: 0.6;
+
+  padding: 0.4rem;
+}

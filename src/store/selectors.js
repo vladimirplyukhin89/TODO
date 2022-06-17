@@ -13,6 +13,8 @@ export const selectTodosByFilter = createSelector(
         return allTodos.filter((todo) => !todo.completed);
       case "completed":
         return allTodos.filter((todo) => todo.completed);
+      default:
+        return allTodos;
     }
   }
 );
