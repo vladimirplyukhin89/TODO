@@ -13,6 +13,8 @@
   background-color: $clr_todo;
   box-shadow: 0 4px 8px $clr_brown;
 
+  animation: todo 1s forwards;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -44,6 +46,15 @@
     text-decoration: line-through;
 
     color: $clr_black;
-    transition: all 0.3s;
+    transition: all 0.5s;
+  }
+}
+
+@keyframes todo {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
   }
 }

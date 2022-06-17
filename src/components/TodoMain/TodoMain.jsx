@@ -41,28 +41,14 @@ const TodoMain = () => {
   };
 
   return (
-    <div className={cn(s.list, { [s.active]: todoLength })}>
-      {todoLength ? (
-        <TaskCategory
-          index={activeIdx}
-          categories={categories}
-          onClickCategory={onClickCategory}
-          itemsLeft={itemsLeft}
-        />
-      ) : (
-        <h1 className={s.list__title2}>No TODO yet</h1>
-      )}
-
-      <TaskRender todos={todos} />
-
-      {/*{todoLength && (
-        <TaskCategory
-          index={activeIdx}
-          categories={categories}
-          onClickCategory={onClickCategory}
-          itemsLeft={itemsLeft}
-        />
-      )}*/}
+    <div className={cn(s.list, s.active)}>
+      <TaskCategory
+        index={activeIdx}
+        categories={categories}
+        onClickCategory={onClickCategory}
+        itemsLeft={itemsLeft}
+      />
+      {todoLength && <TaskRender todos={todos} />}
     </div>
   );
 };
