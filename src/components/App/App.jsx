@@ -23,9 +23,9 @@ function App() {
         position: "right-bottom",
         //className: "success",
         style: {
-          color: "$clr_grey",
-          "background-color": "$clr_success",
-          border: "1px solid $clr_grey",
+          color: "rgb(204, 204, 204)",
+          "background-color": "rgba(9, 180, 140, 0.6)",
+          border: "1px solid rgb(204, 204, 204)",
           padding: "0.4rem",
         },
       });
